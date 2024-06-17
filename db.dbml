@@ -1,0 +1,24 @@
+Table movies {
+  id integer [primary key]
+  title varchar
+  genre time 
+  duration integer
+}
+
+Table shows {
+  id integer [primary key]
+  movie_id integer
+  theatre_id integer
+  showDate date
+  showTime time
+}
+
+Table theatre {
+  id integer [primary key]
+  name varchar
+  location varchar
+}
+
+Ref: shows.movie_id > movies.id
+
+Ref: shows.theatre_id > theatre.id
